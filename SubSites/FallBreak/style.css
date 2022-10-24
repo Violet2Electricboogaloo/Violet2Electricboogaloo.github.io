@@ -1,0 +1,19 @@
+*{
+    color:white;
+}
+
+div > * {
+    margin-left: 10%;
+}
+
+div{
+    height: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flexbox;
+    width: 50%;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+}
