@@ -1,0 +1,143 @@
+.OldWebsiteLink {
+    font-family: "Verdana", Arial, serif;
+    color: #592be2;
+    text-align: center;
+    animation-name: Heading;
+    animation-duration: 3s;
+}
+
+.SUPER-LINE-BREAK {
+animation-name: SUPERLINEBREAK;
+animation-duration: 5s;
+animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+font-size: 8px;
+}
+
+.paragraph {
+    font-size: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+.pars {
+    color: white;
+    animation-name: Paragraphs;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    font-size: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid rgb(96, 112, 255);
+  padding: 10px;
+}
+
+#not-much {
+    opacity: 0%;
+    animation-name: bye;
+    animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-duration: 5s;
+    animation-play-state: paused;
+}
+
+@keyframes bye {
+    from {
+        font-size: 8px;
+        opacity: 100%;
+    }
+    to {
+        font-size: 150px;
+        opacity: 0%;
+    }
+}
+
+.opening-para-div {
+    animation-name: divopen;
+    animation-timing-function:ease-in-out ;
+    animation-duration: 3s;
+    margin: auto;
+}
+
+@keyframes divopen {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+a {
+ text-align:center;
+ display: block;
+ color: #abadff;
+ font-size: 23px;
+ line-height: 35px;
+}
+
+@keyframes SUPERLINEBREAK {
+from{
+white-space: nowrap;
+font-size: 2000px;
+}
+to {
+white-space: nowrap;
+font-size: 8px
+}
+}
+
+
+
+@keyframes Paragraphs {
+
+from {
+font-size: 0px;
+}
+to {
+font-size: 30px;
+}
+}
+
+*:not(.pars, .img) {
+	font-family: "Verdana", Arial, serif;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+
+p, h1, h2, h3, h4 {
+    color: white;
+}
+
+.Heading {
+  font-family: "Verdana", Arial, serif;
+  color: #592be2;
+  text-align: center;
+  font-size: 45px;
+  animation-name: Heading;
+  animation-duration: 3s;
+  animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+body {
+    color: black;
+}
+
+@keyframes Heading {
+0% {
+color: black;
+}
+
+75% {
+color: white;
+}
+
+100% {
+color: #592be2;
+}
+
+}
