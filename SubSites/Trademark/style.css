@@ -1,0 +1,14 @@
+h1 {
+    color:white;
+}
+
+* {
+    color: rgb(246, 217, 255);
+    text-align: center;
+    font-size: larger;
+}
+
+.borderdiv {
+    border-style: solid;
+    border-color: grey;
+}
