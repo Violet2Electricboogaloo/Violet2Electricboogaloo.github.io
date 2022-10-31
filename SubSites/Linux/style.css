@@ -1,0 +1,55 @@
+h2,
+h1 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+div:not(.row) {
+  border-color: white;
+  border-style: solid;
+}
+
+* {
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-family: Verdana;
+}
+
+.arch {
+  color: #00f7ff;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #1e00ff, 1px -1px 0 #1e00ff, -1px 1px 0 #1e00ff,
+    1px 1px 0 #1e00ff;
+}
+
+.gentoo {
+  color: #fca3ff;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.Debian {
+  color: #ff7ace;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #b51f7e, 1px -1px 0 #b51f7e, -1px 1px 0 #b51f7e,
+    1px 1px 0 #b51f7e;
+}
+
+.mint {
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #6bfa7e, 1px -1px 0 #6bfa7e, -1px 1px 0 #6bfa7e,
+    1px 1px 0 #6bfa7e;
+}
+
+body,
+html {
+  height: 100%;
+  background-color: black;
+  background-image: radial-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+}
