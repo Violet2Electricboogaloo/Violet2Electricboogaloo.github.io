@@ -17,35 +17,44 @@
     <title>TicTacToe</title>
 </head>
 <body>
-    <div class="row">
-        <div class="col-sm-4">
-            <button id="1" onclick="tic(1)"></button>
+    <div class="gwwarr">
+        <div class="row flex-nowrap">
+            <div class="col-sm-4">
+                <button id="1" onclick="tic(1)"></button>
+            </div>
+            <div class="col-sm-4">
+                <button id="2" onclick="tic(2)"></button>
+            </div>
+            <div class="col-sm-4">
+                <button id="3" onclick="tic(3)"></button>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <button id="2" onclick="tic(2)"></button>
+        <div class="row flex-nowrap">
+            <div class="col-sm-4">
+                <button id="4" onclick="tic(4)"></button>
+            </div>
+            <div class="col-sm-4">
+                <button id="5" onclick="tic(5)"></button>
+            </div>
+            <div class="col-sm-4">
+                <button id="6" onclick="tic(6)"></button>
+            </div> 
         </div>
-        <div class="col-sm-4">
-            <button id="3" onclick="tic(3)"></button>
-        </div>
-        <div class="col-sm-4">
-            <button id="4" onclick="tic(4)"></button>
-        </div>
-        <div class="col-sm-4">
-            <button id="5" onclick="tic(5)"></button>
-        </div>
-        <div class="col-sm-4">
-            <button id="6" onclick="tic(6)"></button>
-        </div> 
-        <div class="col-sm-4">
-            <button id="7" onclick="tic(7)"></button>
-        </div>
-        <div class="col-sm-4">
-            <button id="8" onclick="tic(8)"></button>
-        </div>
-        <div class="col-sm-4">
-            <button id="9" onclick="tic(9)"></button>
+        <div class="row flex-nowrap">
+            <div class="col-sm-4">
+                <button id="7" onclick="tic(7)"></button>
+            </div>
+            <div class="col-sm-4">
+                <button id="8" onclick="tic(8)"></button>
+            </div>
+            <div class="col-sm-4">
+                <button id="9" onclick="tic(9)"></button>
+            </div>
         </div>
     </div>
-    <h1>X</h1>
+    <h1 style="margin-bottom: -75px;">Current Turn:</h1>
+    <h1 id="turn">X</h1>
+    <hr>
+    <button class="notabutton" onclick="reset()">Reset?</button>
 </body>
 </html>
