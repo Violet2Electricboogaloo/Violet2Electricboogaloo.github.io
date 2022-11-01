@@ -41,7 +41,7 @@ div:not(.row, .clicked, .gwwarr):hover {
 }
 
 .col-sm-4 {
-    height: 20%;
+    height: 40%;
 }
 
 div:not(.row, .gwwarr) {
