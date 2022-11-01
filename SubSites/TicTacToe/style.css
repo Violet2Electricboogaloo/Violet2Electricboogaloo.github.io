@@ -36,7 +36,7 @@ button:not(.notabutton) {
     background-color: transparent;
 }
 
-div:not(.row, .clicked, .gwwarr):hover {
+div:not(.row, .clicked, .gwwarr, .gaf):hover {
     background-color: var(--turncolor);
 }
 
@@ -44,7 +44,7 @@ div:not(.row, .clicked, .gwwarr):hover {
     height: 40%;
 }
 
-div:not(.row, .gwwarr) {
+div:not(.row, .gwwarr, .gaf) {
     background-color: transparent;
     border-style: solid;
     height: 150px;
@@ -65,7 +65,7 @@ hr {
     font-size: 0px;
 }
 
-* {
+*:not(.gaf) {
     justify-content: center;
     text-align: center;
     align-items: center;
