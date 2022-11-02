@@ -53,6 +53,11 @@ div:not(.row, .gwwarr, .gaf) {
     transition: background-color 0.5s;
 }
 
+b {
+    transition: color 2.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    color: var(--turncolor)
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -60,12 +65,14 @@ body, html {
 }
 
 hr {
-    line-height: 0px;
-    height: 0px;
-    font-size: 0px;
+    background-color: black;
+    border-color: var(--turncolor);
+    border-style: solid;
+    padding-bottom: 10px;
+    height: 2px;
 }
 
-*:not(.gaf) {
+*:not(.gaf, b) {
     justify-content: center;
     text-align: center;
     align-items: center;

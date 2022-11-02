@@ -1,6 +1,10 @@
 var turn = "X"
 
+var players = 2
+
 var color = "blue"
+
+
 
 function reset() {
     
@@ -24,20 +28,55 @@ function reset() {
     $("#turn").text(turn)
 }
 
+function heroic() {
+    reset()
+    $(".duh").text(players + ' Player')
+    if(players === 2) {
+        players = 3
+    } else {
+        players = 2
+    }
+}
+
 function tic(numb) {
     $('#' + numb).parent().addClass("clicked")
-    $('#' + numb).text(turn)
+
     $('#' + numb).prop("disabled", true);
-    if(turn == "X") {
-        turn = "O"
-        color = "red"
-        document.body.style.setProperty("--turncolor", "red")
-    } else {
-        turn = "X"
-        color = "blue"
-        document.body.style.setProperty("--turncolor", "blue")
-        $('#' + numb).css("color", "red")
+
+    $('#' + numb).text(turn)
+
+    if(players === 2) {
+        if(turn == "X") {
+            turn = "O"
+            color = "red"
+            document.body.style.setProperty("--turncolor", "red")
+        } else {
+            turn = "X"
+            color = "blue"
+            document.body.style.setProperty("--turncolor", "blue")
+            $('#' + numb).css("color", "red")
+        }
     }
+
+    if(players === 3) {
+        if(turn == "X") {
+            turn = "O"
+            color = "red"
+            document.body.style.setProperty("--turncolor", "red")
+            $('#' + numb).css("color", "blue")
+        } else if(turn === "O") {
+            turn = "Y"
+            color = "limegreen"
+            document.body.style.setProperty("--turncolor", "limegreen")
+            $('#' + numb).css("color", "red")
+        } else {
+            turn = "X"
+            color = "blue"
+            document.body.style.setProperty("--turncolor", "blue")
+            $('#' + numb).css("color", "limegreen")
+        }
+    }
+
     $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
     $("#turn").text(turn)
     $('#' + numb).animate({
