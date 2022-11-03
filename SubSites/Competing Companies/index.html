@@ -16,9 +16,11 @@
 </head>
 <body>
     <h1>Computer Hardware Competing Companies</h1>
+
+    <p style="color: gray; font-size: initial;">Note to my teacher: <br> Sorry this took so long... getting the CSS columns to behave right was a little confusing. Turns out, I put them in a container, when I needed them to be in a "fluid container" instead! (see the difference at the bottom of the page)</p>
     
-    <div class="container">
-        <div class="row">
+    <div id="maintainer" class="container-fluid">
+        <div class="row row-space">
             <div style="border-color: darkred;" class="col-md-4">
                 <h1 style="color: rgb(255, 0, 0);  -webkit-text-stroke: 2px darkred;">AMD GPUs</h1>
                 <ul class="pos">
@@ -63,8 +65,28 @@
     
                 </ul>
         </div>
+        
     </div>
+    <hr>
+        <button id="fluidbutton" onclick="fluid()">
+            Container (im a button)
+        </button>
 
+        <h1>Explanation to the problem:</h1>
+
+        <p>Containers are designed to hold columns, but the container only takes up ~= 80% of the web page's width. :(</p>
+
+        <p>An alternative to the Container, is the Fluid Container, which takes up the whole web page! (Or, whatever you specify)</p>
+        <hr>
+        <p>I also learnt the difference between column types!</p>
+        <p style="font-size: 1.25em">To made a column you add a class to an object. col-__-6 is half of the webpage for example. <br>"BUT WHAT GOES IN THE BLANK?!?!" I  hear your cries, and i have figured it out!</p>
+        <ul class="smol">
+            <li>A col-sm stands for "Column Small", meaning that it will stack the columns on "small" devices</li>
+            <li>col-md stacks on medium devices</li>
+            <li>And col-lg stacks on LARGE devices.</li>
+        </ul>
+
+        <h1 style="color: red; font-size: 2em">I'm too tired to implement a button to show you that right now though. :(</h1>
 </body>
 
 </html>
