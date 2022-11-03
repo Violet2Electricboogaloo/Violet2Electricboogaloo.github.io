@@ -4,7 +4,7 @@ var players = 2
 
 var color = "blue"
 
-
+var board = 3
 
 function reset() {
     
@@ -35,6 +35,35 @@ function heroic() {
         players = 3
     } else {
         players = 2
+    }
+}
+
+function boardsize() {
+    reset()
+    if(board === 3) {
+        $(".dum").text("3x3")
+        board = 4
+        $(".gwwarr").hide("slow")
+        $(".x4").hide()
+        $(".x4").css("display", "flexbox")
+        $(".x4").show("slow")
+    } else {
+        $(".dum").text("4x4")
+        board =  3
+        $(".gwwarr").show("slow")
+        $(".x4").css("display", "flexbox")
+        $(".x4").hide("slow")
+    }
+}
+
+function check(one, two, three, four) {  
+    if(one.text() === two.text() && two.text() === three.text() && three.text() === four.text()  && three.text() != "" ) {
+        $("button").prop("disabled", true)
+        $("button:not(.notabutton)").parent().addClass("clicked")
+        $("#turn").text("Player " + one.text() + " Has Won!")    
+        setTimeout(() => {
+            reset()
+        }, 2000);
     }
 }
 
@@ -77,11 +106,24 @@ function tic(numb) {
         }
     }
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    ////$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
     $("#turn").text(turn)
     $('#' + numb).animate({
         opacity: 1
     }, 350)
+    
+    check($("#1a"), $("#2a"), $("#3a"), $("#4a"))
+    check($("#5a"), $("#6a"), $("#7a"), $("#8a"))
+    check($("#9a"), $("#10a"), $("#11a"), $("#12a"))
+    check($("#13a"), $("#14a"), $("#15a"), $("#16a"))
+    
+    check($("#1a"), $("#5a"), $("#9a"), $("#13a"))
+    check($("#2a"), $("#6a"), $("#10a"), $("#14a"))
+    check($("#3a"), $("#7a"), $("#12a"), $("#15a"))
+    check($("#4a"), $("#8a"), $("#13a"), $("#16a"))
+
+    check($("#1a"), $("#6a"), $("#11a"), $("#16a"))
+    check($("#4a"), $("#7a"), $("#10a"), $("#13a"))
 
     if($("#1").text() === $("#2").text() && $("#2").text() === $("#3").text() && $("#1").text() != "" ) {
         $("button").prop("disabled", true)
@@ -89,7 +131,7 @@ function tic(numb) {
         $("#turn").text("Player " + $("#1").text() + " Has Won!")
 color = "black"
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    ////$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         setTimeout(() => {
             reset()
         }, 2000);
@@ -99,7 +141,7 @@ color = "black"
         $("#turn").text("Player " + $("#5").text() + " Has Won!")
 color = "black"
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    ////$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         setTimeout(() => {
             reset()
         }, 2000);
@@ -109,7 +151,7 @@ color = "black"
         $("#turn").text("Player " + $("#7").text() + " Has Won!")
 color = "black"
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    ////$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         setTimeout(() => {
             reset()
         }, 2000);
@@ -119,7 +161,7 @@ color = "black"
         $("#turn").text("Player " + $("#7").text() + " Has Won!")
 color = "black"
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    ////$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         setTimeout(() => {
             reset()
         }, 2000);
@@ -129,7 +171,7 @@ color = "black"
         $("#turn").text("Player " + $("#8").text() + " Has Won!")
 color = "black"
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    //$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         setTimeout(() => {
             reset()
         }, 2000);
@@ -139,7 +181,7 @@ color = "black"
         $("#turn").text("Player " + $("#9").text() + " Has Won!")
 color = "black"
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    //$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         setTimeout(() => {
             reset()
         }, 2000);
@@ -149,7 +191,7 @@ color = "black"
         $("#turn").text("Player " + $("#9").text() + " Has Won!")
 color = "black"
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    //$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         setTimeout(() => {
             reset()
         }, 2000);
@@ -159,12 +201,10 @@ color = "black"
         $("button").prop("disabled", true)
         $("button:not(.notabutton)").parent().addClass("clicked")
         color = "black"
-
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         $("#turn").text("Player " + $("#7").text() + " Has Won!")
-color = "black"
+        color = "black"
 
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    //$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
         setTimeout(() => {
             reset()
         }, 2500);
@@ -176,8 +216,8 @@ $(document).mousemove(function(event) {
     windowHeight = $(window).height();
     
     mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
-    mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+    mouseYpercentage = Math.round(event.pageY / windowHeight * 50);
     
-    $('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black, black)`);
+    //////$('body').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + `%, ${color}, black)`);
   });
 
