@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+.post {
+    width: 90%;
+    margin: auto;
+    background-color: rgb(28, 28, 28);
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+}
+
+img {
+    border-radius: 50%;
+    padding: 2%;
+    margin: 2%; 
+    width: 20vh;
+    aspect-ratio: 1;
+    display: flexbox;
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+    transition: border-color 1s cubic-bezier(0.39, 0.575, 0.565, 1), border-radius 0.5s cubic-bezier(0.39, 0.575, 0.565, 1), margin-left 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.blom {
+    font-size: 100% !important;
+    color: grey !important;
+    margin: auto !important;
+    text-align: center !important;
+}
+
+.col-5 {
+    margin: auto;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 15%/25%;
+    background-color: black;
+}
+
+.topfaradiv {
+    border-style: solid;
+    border-color: white;
+}
+
+img:hover {
+    border-color: red;
+    border-radius: 0%;
+}
+
+[class*='col-'] {
+    border-color: white;
+}
+
+
+
+.scyth:hover {
+    border-color: blue !important; 
+}
+
+.row {
+    border-style: solid;
+    border-color: gray;
+    transition: border-color 1.5s cubic-bezier(0.39, 0.575, 0.565, 1), border-radius 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.row:hover {
+    border-color: rgb(255, 255, 255);
+
+}
+
+.suggest {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding: auto !important;
+    text-align: center;
+}
+
+.titlebar {
+    z-index: 10;
+    margin: 0, 0;
+    padding: 0, 0;
+    display: flexbox;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(15, 0, 75);
+    transition: background-color 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.titlebar:hover {
+    background-color: red;
+}
+
+.titlebar > * {
+    font-family: 'Bowlby One SC', cursive !important;
+    font-size: 4vh;
+    top: 50%;
+    bottom: auto;
+    height: 0%;
+    padding: auto;
+    height: 100%;
+    width: 100%;
+    padding-top: 0.8%;
+}
+
+html, body {
+    max-width: 1400px; 
+    min-width: 600px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(12, 10, 20);
+    margin: auto;
+}
+
+*:not(.titlebar, div, body, html, .suggest, img) {
+
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flexbox;
+    text-align: center;
+}
+
+p, h2, h3, h4, tr {
+    height: 100%; 
+    vertical-align: middle;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.5em;
+}
