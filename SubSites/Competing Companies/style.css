@@ -10,30 +10,6 @@
     flex-direction: column;
   }
 
-em {
-    color: black;
-}
-
-.smol > * {
-    font-size: 1.25em;
-}
-
-button {
-    font-size: 3em;
-    width: 90%;
-    color: red;
-    background-color: black;
-    border-style: solid;
-    border-color: white;
-}
-
-button:hover {
-    background-color: gray;
-}
-
-button:disabled, button:active {
-    color: rgb(100, 0, 20);
-}
 
 .point {
     font-size: 1em;
@@ -69,7 +45,7 @@ li {
     padding-right: 5px;
 }
 
-[class*='col-'] {
+.col-md-4 {
     border-style: solid;
     border-color: white;
 }
