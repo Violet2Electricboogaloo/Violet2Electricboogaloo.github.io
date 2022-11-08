@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+* {
+    color: white;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: larger;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+
+li {
+    width: 30%;
+    min-width: 300px;
+    font-size: 2em;
+}
