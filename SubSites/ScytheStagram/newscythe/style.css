@@ -1,0 +1,117 @@
+#Profiles > div {
+    background-color: rgb(70, 0, 25);
+    border-color: rgb(225, 0, 125);
+    border-style: solid;
+    min-width: 250px;
+    width: 90%;
+    max-width: 450px;
+    display: flexbox;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#Profiles > div > p {
+    color: blueviolet;
+}
+
+.pfpnohover {
+    transform: scale(1);
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    transition: all 3.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.pfp{
+    transform: scale(1);
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    transition: all 3.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.pfp:hover {
+    border-color: red;
+    transform: scale(1.2);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+html, body {
+    background-color: black;
+    min-height: 100vh;
+    min-width: 100%;
+    max-width: 100vw;
+    background-image: linear-gradient(rgb(80, 24, 0), darkblue);
+}
+
+#titlebar {
+    width: 100%;
+    height: 50px;
+    background-color: darkred;
+    transition: all 10s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    opacity: 0.7;
+}
+
+#titlebar:hover {
+    background-color: blue;
+    opacity: 1;
+    border-bottom-color: white;
+    transform: scale(1.35) translateY(7px);
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#titlebar > h1 {
+    user-select: none;
+}
+
+#topsticky {
+    height: 75px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 10;
+    position: sticky;
+    top: 0px;
+}
+
+h1 {
+    font-size: 225%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+h3 {
+    font-size: 175%;
+}
+
+h4, p {
+    font-size: 150%;
+}
+
+* {
+    color: white;
+    text-align: center;
+    display: flexbox;
+    margin: auto;
+    transform: scale(1);
+}
