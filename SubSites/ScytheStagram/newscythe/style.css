@@ -4,7 +4,7 @@
     border-style: solid;
     min-width: 250px;
     width: 90%;
-    max-width: 450px;
+    max-width: 325px;
     display: flexbox;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -56,10 +56,13 @@
 
 html, body {
     background-color: black;
-    min-height: 100vh;
-    min-width: 100%;
-    max-width: 100vw;
+    min-height: 101vh;
+    width: 100vw;
     background-image: linear-gradient(rgb(80, 24, 0), darkblue);
+}
+
+html {
+    overflow-x: hidden;
 }
 
 #titlebar {
@@ -76,7 +79,7 @@ html, body {
     background-color: blue;
     opacity: 1;
     border-bottom-color: white;
-    transform: scale(1.35) translateY(7px);
+    transform: scale(1.35) translateY(5px);
     transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -87,7 +90,7 @@ html, body {
 #topsticky {
     height: 75px;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     z-index: 10;
     position: sticky;
     top: 0px;
@@ -115,4 +118,7 @@ h4, p {
     display: flexbox;
     margin: auto;
     transform: scale(1);
+    align-items: center;
+    align-self: center;
+    justify-content: center;
 }
