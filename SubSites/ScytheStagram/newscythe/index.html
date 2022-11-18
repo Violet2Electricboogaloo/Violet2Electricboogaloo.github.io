@@ -21,25 +21,26 @@
     
     <body>
         <div id="topsticky">
-            <div id="titlebar">
+            <div onclick="mainpage()" id="titlebar">
                 <h1>ScytheStagram</h1>
             </div>
         </div>
 
         <div id="descs">
-            <div class="container row" id="descanastasia" style="display: none; max-width: 100vw;">
-                <div class="col-sm-5">
+            <div class="fluid-container row" id="descanastasia" style="display: none; width: 102%; background-color: rgb(50, 50, 50); padding-top: 85px; margin-top: -75px; padding-bottom: 25px; background-image: linear-gradient(rgb(50, 50, 50),  transparent);">
+                <div class="col-md-5 col-sm-6 col-lg-4">
                     <img class="pfpnohover" src="../Citra Terranova.png" alt="Citra Terranova">
                 </div>
-                <div class="col-sm-7">
-                    <h1>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem</h1>
+                <div class="col-md-7 col-sm-6 col-lg-8">
+                        <h1 style="color: blueviolet;">Scythe</h1>
+                        <p>Hello! I am Scythe Anastasia! I was the apprentice of <blo style="color: red;">Honorable Scythe Curie</blo>, The Grand Dame of Death!<br><em style="color: gray;">If I am currently not responding, I am either sleeping or in the study.</em></p>
                 </div>
             </div>
         </div>
         
 
         <div id="Profiles" class="flex-container row">
-            <div onclick="display('#Profiles > *', '#descanastasia')" id="profileanastasia">
+            <div onclick="display('#Profiles', '#descanastasia')" id="profileanastasia">
                 <img class="pfp" src="../Citra Terranova.png" alt="Citra Terranova">
                 <h1 class="charname">H.S. Anastasia</h1>
                 <p class="desc">Honorable Scythe Anastasia</p>

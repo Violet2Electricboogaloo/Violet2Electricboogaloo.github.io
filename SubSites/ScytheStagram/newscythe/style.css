@@ -21,10 +21,11 @@
     max-width: 250px;
     aspect-ratio: 1;
     border-radius: 50%;
-    border-width: 2px;
-    border-color: white;
+    border-width: 5px;
+    background-color: rgb(50, 50, 50);
+    border-color: blueviolet;
     border-style: solid;
-    padding: 5px;
+    padding: 10px;
     margin-top: 10px;
     margin-bottom: 0px;
     transition: all 3.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -36,7 +37,7 @@
     max-width: 200px;
     aspect-ratio: 1;
     border-radius: 50%;
-    border-width: 2px;
+    border-width: 3px;
     border-color: white;
     border-style: solid;
     padding: 5px;
