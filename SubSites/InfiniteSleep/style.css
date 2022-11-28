@@ -1,0 +1,23 @@
+* {
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+body, html {
+    background-color: rgb(30, 20, 40);
+    min-height: 120vh;
+    min-width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+p {
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 3.5rem
+}
