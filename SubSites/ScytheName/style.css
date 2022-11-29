@@ -1,0 +1,142 @@
+
+
+hr {
+    border: none;
+    background-color: white;
+    height: 20px;
+}
+
+:root {  
+    --purple: rgb(89, 0, 255);
+    --violet: rgb(8, 0, 255);
+    --pink: rgb(195, 143, 244);
+  }
+  
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  @keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+h1 > .magic {
+    display: inline-block;
+    position: relative;
+  }
+  
+  h1 > .magic > .magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+  }
+  
+  h1 > .magic > .magic-star > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+  }
+  
+  h1 > .magic > .magic-star > svg > path {
+    fill: var(--violet);
+  }
+  
+  h1 > .magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+  
+
+#divfaraday {
+    width: 100vw;
+    transform: translateX(-2vw);
+}
+
+#faradayheader {
+    background: linear-gradient(90deg, blue, violet);
+    background-clip: text;
+    color: transparent;
+    width: 20rem;
+    margin: auto;
+}
+
+h1  {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p, a {
+    font-size: 1.4rem;
+}
+
+a {
+    color: blueviolet !important;
+}
+
+body, html {
+    background: linear-gradient(rgb(30, 20, 40), rgb(40, 20, 30));
+    background-color: rgb(30, 20, 40);
+    text-align: center;
+    min-height: 100vh;
+    width: 98vw;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+* {
+    color: white;
+    font-family: "Rubik";
+}
+
+.budget {
+    color: rgb(100, 0, 255);
+    -webkit-text-stroke: 1px black;
+    font-weight: 1000;
+}

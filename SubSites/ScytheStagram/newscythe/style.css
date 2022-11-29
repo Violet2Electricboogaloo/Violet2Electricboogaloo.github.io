@@ -123,3 +123,9 @@ h4, p {
     align-self: center;
     justify-content: center;
 }
+
+hr {
+    border-color: green;
+    border-width: 20px;
+    height: 10px !important;
+}
