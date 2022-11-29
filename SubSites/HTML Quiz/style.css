@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+#yesbut:hover {
+    color: limegreen;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-style: double;
+    transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover {
+    background-color: rgb(35, 0, 87);
+    color: red;
+    transform: scale(1.5);
+}
+
+button:active {
+    background-color: rgb(140, 0, 255);
+    color: white;
+}
+
+button:disabled {
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p, h3, button {
+    font-size: 1.5rem;
+}
+
+header > * {
+    font-size: 3rem;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(50, 0, 40);
+}
+
+html {
+    padding-top: 20px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+* {
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
