@@ -12,9 +12,11 @@ function gensleep() {
 
 
 $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() + 1500 >= $(document).height()) {
-        for (let index = 0; index < 100; index++) {
-            gensleep()
+    if($(window).scrollTop() + $(window).height() + 5800 >= $(document).height()) {
+        for (let index = 0; index < 1000; index++) {
+            setTimeout(() => {
+                gensleep()
+            }, index * 10);
         }
     }
 });
