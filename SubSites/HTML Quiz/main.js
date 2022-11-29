@@ -8,8 +8,19 @@ function lolno() {
 
 function start() {
     $("body").hide()
-    $("html, body").css("background", "black")
-    $("body > *:not(.game)").remove()
+    $("body > *:not(.game)").hide()
     $("body").show()
+    $(".game").show()
+    $(".game").css("display", "flexbox")
+    $(".game, .game > h1").transition({
+        "opacity": "1"
+    }, 1500, "cubic-bezier(0.445, 0.05, 0.55, 0.95)")
 
+    setTimeout(() => {
+        $(".game > h1").transition({
+            "opacity": "0"
+        }, 1500, "cubic-bezier(0.445, 0.05, 0.55, 0.95)")
+    }, 1500);
+
+    $("#question1").css("display", "flexbox")
 }
