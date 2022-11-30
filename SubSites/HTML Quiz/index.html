@@ -31,11 +31,237 @@
             
             <div id="question1" style="display: none;">
                 <h1>What element do you put visible content inside of? (Where do text and images on the page reside?)</h1>
-                <button class="choice">The < body ></button>
-                <button class="choice">The < html ></button>
-                <button class="choice">The < header ></button>
+                <button onclick="right()" class="choice">The < body ></button>
+                <button onclick="wrong()" class="choice wrong">The < html ></button>
+                <button onclick="wrong()" class="choice wrong">The < header ></button>
+
+                <p class="answer" style="display: none;">The correct Answer is "body". Content outside of bodies are not meant to be visible!</p>
             </div>
+
+            <div id="question2" style="display: none;">
+                <h1>What does HTML stand for?</h1>
+                <button onclick="wrong()" class="choice wrong">Hyper Text Margin Label</button>
+                <button onclick="right()" class="choice">Hyper Text Markup Language</button>
+                <button onclick="wrong()" class="choice wrong">Hyper Transition Makeup Languuage</button>
+
+                <p class="answer" style="display: none;">The correct Answer is "body". Content outside of bodies are not meant to be visible!</p>
+            </div>
+
+            <div id="question3" style="display: none;">
+                <h1>How do you insert a line <b>BREAK</b>?</h1>
+                <button onclick="right()" class="choice">< br ></button>
+                <button onclick="wrong()" class="choice wrong">< hr ></button>
+
+                <p class="answer" style="display: none;">The correct Answer is "br". The hr element is Horizontal Rule, and it is not the same as a BR (Line Break) even if its similar </p>
+            </div>
+
+            <div id="question4" style="display: none;">
+                <h1>How do you make text <b>bold</b> in HTML?</h1>
+                <button onclick="right()" class="choice">< b ></button>
+                <button onclick="wrong()" class="choice wrong">< em ></button>
+                <button onclick="right()" class="choice">< strong ></button>
+
+                <p class="answer" style="display: none;">Trick question! Both properties make text <b>bold</b>/<strong>strong</strong></p>
+            </div>
+
+            <div id="question5" style="display: none;">
+                <h1>How do you <em>emphasize</em> text in HTML?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;b&gt;</button>
+                <button onclick="right()" class="choice">&lt;em&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;strong&gt;</button>
+
+                <p class="answer" style="display: none;">EM stands for Emphasize.</p>
+            </div>
+
+            <div id="question6" style="display: none;">
+                <h1>How do you <a>create a hyprlink</a> in HTML?</h1>
+                <button onclick="right()" class="choice">&lt;a&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;src&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;link&gt;</button>
+
+                <p class="answer" style="display: none;">A, or the "Anchor" Element allows you to refer to another link/webpage.</p>
+            </div>
+
+            <div id="question7" style="display: none;">
+                <h1>What indicates the end of a tag?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;/tag\&gt;</button>
+                <button onclick="right()" class="choice">&lt;/tag&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;tag\&gt;</button>
+
+                <p class="answer" style="display: none;"></p>
+            </div>
+
+            <div id="question8" style="display: none;">
+                <h1>What makes a hyprlink/anchor/&lt;a&gt; open in a new tab?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;a href="example.com"&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;a style="tab: new;" href="example.com" &gt;</button>
+                <button onclick="right()" class="choice">&lt;a href="example.com" target="_blank"&gt;</button>
+
+                <p class="answer" style="display: none;">Target="_blank" will tell the browser to open in a new tab..</p>
+            </div>
+
+            <div id="question9" style="display: none;">
+                <h1>Click which 3 are used in a table.</h1>
+                <button onclick="rightpart('tr')" class="choice thetr">&lt;tr&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;tb&gt;</button>
+                <button onclick="rightpart('td')" class="choice thetd">&lt;td&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;ht&gt;</button>
+                <button onclick="rightpart('th')" class="choice theth">&lt;th&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;bt&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;ar&gt;</button>
+
+                <p class="answer" style="display: none;">Target="_blank" will tell the browser to open in a new tab..</p>
+            </div>
+            
+            <div id="question10" style="display: none;">
+                <h1>How do you make a bullet list (NOT a numbered list)?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;ol&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;table&gt;</button>
+                <button onclick="right()" class="choice">&lt;ul&gt;</button>
+
+                <p class="answer" style="display: none;">ul is Unordered List.</p>
+            </div>
+            <div id="question11" style="display: none;">
+                <h1>Correct syntax to insert an image?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;img&gt;https://photo.org&lt;/img&gt;</button>
+                <button onclick="right()" class="choice">&lt;img src="https://photo.org" /&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;img https://photo.org&gt;</button>
+
+                <p class="answer" style="display: none;">src is the proper syntax to insert an img</p>
+            </div>
+
+            <div id="question12" style="display: none;">
+                <h1>How do I create a comment?</h1>
+                <button onclick="right()" class="choice">&lt;!-- Comment --&gt;</button>
+                <button onclick="wrong()" class="choice wrong">// Comment</button>
+                <button onclick="wrong()" class="choice wrong">/* Comment */</button>
+                <button onclick="wrong()" class="choice wrong">--Comment</button>
+                <button onclick="wrong()" class="choice wrong">--[[Comment]]</button>
+                <button onclick="wrong()" class="choice wrong">Comments do not exist</button>
+
+                <p class="answer" style="display: none;">I almost accidentally commented this answer.</p>
+            </div>
+
+            <div id="question13" style="display: none;">
+                <h1>How do I set the page title?</h1>
+                <button onclick="right()" class="choice">&lt;title&gt;Title&lt;/title&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;head&gt;Title&lt;/head&gt;</button>
+
+                <p class="answer" style="display: none;">The title appears on the tab name.</p>
+            </div>
+            
+            <div id="question14" style="display: none;">
+                <h1><b>WHERE</b> do I set the page title?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;header&gt;Title&lt;/header&gt;</button>
+                <button onclick="right()" class="choice">&lt;head&gt;Title&lt;/head&gt;</button>
+
+                <p class="answer" style="display: none;">The title appears on the tab name.</p>
+            </div>
+
+            <div id="question15" style="display: none;">
+                <h1>If an image cannot be displayed, how do you show text instead</h1>
+                <button onclick="right()" class="choice">Extremely lengthy amounts of complicated JS</button>
+                <button onclick="right()" class="choice">&lt;img alt="text" /&gt;</button>
+
+                <p class="answer" style="display: none;">This is important for people with older software/hardware and for the visually impaired.</p>
+            </div>
+
+            <div id="question16" style="display: none;">
+                <h1>What do you start most HTML documents with? (it is VERY old and unnessacary)</h1>
+                <button onclick="right()" class="choice">&lt;!DOCTYPE html5&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;html&gt;</button>
+
+                <p class="answer" style="display: none;">Doctype isnt really needed these days but its nice-ish for VERY backwards compatability</p>
+            </div>
+
+            <div id="question17" style="display: none;">
+                <h1>How do you display a footer section in a document?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;feet&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;foot&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;footest&gt;</button>
+                <button onclick="right()" class="choice">&lt;footer&gt;</button>
+
+                <p class="answer" style="display: none;">footer...  what else would it be?</p>
+            </div>
+
+            <div id="question18" style="display: none;">
+                <h1>How do you play videos in HTML?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;&gt;</button>
+                <button onclick="right('iframe')" class="choice theiframe">&lt;iframe&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;img src="youtube.com"&gt;</button>
+                <button onclick="right('video')" class="choice thevideo">&lt;video&gt;</button>
+
+                <p class="answer" style="display: none;">iframe doesn't really count, but its used in youtube embeds and such.</p>
+            </div>
+            
+            <div id="question19" style="display: none;">
+                <h1>How do you display the header section in a document?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;head&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;headest&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;heading&gt;</button>
+                <button onclick="right()" class="choice">&lt;header&gt;</button>
+
+                <p class="answer" style="display: none;">Same story as the footer</p>
+            </div>
+
+            <div id="question20" style="display: none;">
+                <h1>Which question is this?</h1>
+                <button onclick="right()" class="choice wrong">20</button>
+                <button onclick="right()" class="choice wrong">20</button>
+                <button onclick="right()" class="choice">20</button>
+                <button onclick="right()" class="choice wrong">I do not know</button>
+
+                <p class="answer" style="display: none;">how would you get this wrong</p>
+            </div>
+
+            <div id="question21" style="display: none;">
+                <h1>Correct syntax for the paragraph element?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;paragraph&gt;text&lt;/paragraph&gt;</button>
+                <button onclick="right()" class="choice">&lt;p&gt;text&lt;/p&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;para&gt;text&lt;/para&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;ph&gt;text&lt;/ph&gt;</button>
+
+                <p class="answer" style="display: none;">p</p>
+            </div>
+
+            <div id="question22" style="display: none;">
+                <h1>Where does almost ALL HTML go in a document?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;head&gt;&lt;/head&gt;</button>
+                <button onclick="right()" class="choice">&lt;html&gt;&lt;/html&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;!DOCTYPE html5&gt;</button>
+
+                <p class="answer" style="display: none;">The html tag is nessacary!</p>
+            </div>
+
+            
+            <div id="question23" style="display: none;">
+                <h1>How would I link to aboutme.html?</h1>
+                <button onclick="wrong()" class="choice wrong">&lt;a&gt;./aboutme.html&lt;/a&gt;</button>
+                <button onclick="right()" class="choice">&lt;a href="./aboutme.html"&gt;click me&lt;/a&gt;</button>
+                <button onclick="wrong()" class="choice wrong">&lt;./aboutme.html&gt;</button>
+
+                <p class="answer" style="display: none;"></p>
+            </div>
+
+            <div id="question24" style="display: none;">
+                <h1>Why does this code example fail to display an image?</h1>
+                <h2>&lt;img https://www.example.com/laptop.jpg /&gt;</h2>
+                <button onclick="wrong()" class="choice wrong">It's supposed to use an href</button>
+                <button onclick="right()" class="choice">It's supposed to use src</button>
+                <button onclick="wrong()" class="choice wrong">The / shouldn't be  there</button>
+
+                <p class="answer" style="display: none;"></p>
+            </div>
+
+            <div id="question25" style="display: none;">
+                <h1>yayyy you did itttt thats all have a good day</h1>
+
+                <button onclick="rightpart()" class="choice">ok</button>
+            </div>
+
+            
         </div>
+        
 
 
     </body>
