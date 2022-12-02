@@ -6,6 +6,27 @@ let quesnumb = 1
 
 let answered = false
 
+let modevar = "html"
+
+function modechange() {
+    $("#modebutton").prop("disabled", true)
+    setTimeout(() => {
+        $("#modebutton").prop("disabled", false)
+    }, 700);
+    if (modevar === "html") {
+        modevar = "css"
+        $("body, html").transition({"background-color": "rgb(20, 0, 70)"}, 500, "cubic-bezier(0.39, 0.575, 0.565, 1)")
+    } else if(modevar === "css") {
+        modevar = "js"
+        $("body, html").transition({"background-color": "rgb(50, 50, 0)"}, 500, "cubic-bezier(0.39, 0.575, 0.565, 1)")
+    } else {
+        $("body, html").transition({"background-color": "rgb(50, 0, 40)"}, 500, "cubic-bezier(0.39, 0.575, 0.565, 1)")
+        modevar = "html"
+    }
+
+    $("#modebutton").text("MODE: " + modevar.toUpperCase())
+}
+
 function lolno() {  
     $("#nobut").transition({"transform": "scale(0)"}, 500, "cubic-bezier(0.55, 0.055, 0.675, 0.19)")
     $("#readyquestion").transition({"color": "red"}, 1000, "cubic-bezier(0.445, 0.05, 0.55, 0.95)")
@@ -15,6 +36,8 @@ function lolno() {
 }
 
 function start() {
+    $(".game" + modevar).addClass("game")
+
     $("body").hide()
     $("body > *:not(.game)").hide()
     $("body").show()
@@ -31,24 +54,26 @@ function start() {
     }, 1500);
     question = "question1"
     setTimeout(() => {
-        $("#question1").css("display", "flexbox")
-        $("#question1").show()
-    }, 2500);
+        $(".game > #question1").css("display", "flexbox")
+        $(".game > #question1").show()
+    }, 200);
 }
 
 function proceed() {
     quesnumb++
 
-    $("#" + question).transition({"opacity": "0"}, 7500, "cubic-bezier(0.6, 0.04, 0.98, 0.335)")
-    $("#" + question).hide(5000)
+    $(".game > #question" + (quesnumb - 2)).transition({"opacity": "0"}, 1500, "cubic-bezier(0.6, 0.04, 0.98, 0.335)")
+    
+        $(".game > #question" + (quesnumb - 2)).hide(1500)
+
 
     question = "question" + quesnumb
 
     setTimeout(() => {
-        $("#" + question).css("display", "flexbox")
-        $("#" + question).css("opacity", "0")
-        $("#" + question).show()
-        $("#" + question).transition({"opacity": "1"}, 1000)
+        $(".game > #" + question).css("display", "flexbox")
+        $(".game > #" + question).css("opacity", "0")
+        $(".game > #" + question).show()
+        $(".game > #" + question).transition({"opacity": "1"}, 1000)
     }, 100);
 }
 
@@ -56,6 +81,7 @@ function wrong() {
     $("#" + question + "> h1").text("Wrong!")
     $("#" + question + "> .answer").show(1000)
     $("#" + question + "> .answer").css("display", "flexbox")
+    $("#" + question + "> .wrong").transition({"transform": "scale(0)"}, 1500)
     $("#" + question + "> .wrong").hide(1000)
     $("#" + question + "> button").prop("disabled", "true")
 
@@ -66,7 +92,7 @@ function wrong() {
 
 function right() {
     $("#" + question + "> h1").text("Correct!")
-    $("#" + question + "> .wrong").hide(1000)
+    $("#" + question + "> .wrong").transition({"transform": "scale(0)"}, 1250, "cubic-bezier(0.47, 0, 0.745, 0.715)")
     $("#" + question + "> button").prop("disabled", "true")
 
     answered = true
@@ -84,7 +110,7 @@ function wrongpart() {
     answered = true
 }
 
-function rightpart(wha) {
+function rightpart(wha, val) {
     //$("#" + question + "> h1").text("Correct!")
     //$("#" + question + "> .wrong").hide(1000)
     //$("#" + question + "> button").prop("disabled", "true")
@@ -94,7 +120,7 @@ function rightpart(wha) {
     $(".the" + wha).css("background", "green")
     $(".the" + wha).css("color", "white")
 
-    if(partsright === 3) {
+    if(partsright === val) {
         partsright = 0
         right()
         proceed()
