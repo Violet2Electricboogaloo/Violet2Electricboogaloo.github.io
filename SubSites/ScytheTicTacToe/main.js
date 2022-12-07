@@ -4,7 +4,7 @@ function tester(which) {
     if (biggered == false) {
         $("#" + which).css("overflow", "visible")
 
-        let horizontal = "0vw"
+        let horizontal = "10vw"
 
         let vertical = "-14vh"
 
@@ -21,17 +21,16 @@ function tester(which) {
         }
 
         if(which.slice(-1) == "2") {
-            horizontal = "-35vw"
+            horizontal = "-25vw"
         } else if(which.slice(-1) == "3") {
-            horizontal = "-70vw"
+            horizontal = "-60vw"
         }
 
         $("#" + which + "> .minicontent").transition({
             "transform": `translate(${horizontal}, ${vertical})`,
             "background-color": "rgba(35, 15, 50, 100)",
             "overflow-y": "scroll",
-            "min-height": "100vh",
-            "width": "100vw"
+            "min-height": "100vh"
         }, 1500, "cubic-bezier(0.39, 0.575, 0.565, 1)")
 
         
@@ -59,11 +58,10 @@ function theecks(which) {
         $("#" + which).css("z-index", "1")
     
         $("#" + which + "> .minicontent").transition({
-            "transform": "scale(0.3) translate(-115%, -120%)",
+            "transform": "scale(0.3) translate(-95%, -120%)",
             "background-color": "rgba(35, 15, 50, 0)",
             "overflow-y": "hidden",
-            "min-height": "100vh",
-            "width": "100vw"
+            "min-height": "100vh"
         }, 1500, "cubic-bezier(0.39, 0.575, 0.565, 1)")
         
         // $(`.biggiecheese > *:not(#${which}), body > h1`).transition({

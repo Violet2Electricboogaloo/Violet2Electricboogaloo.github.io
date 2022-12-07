@@ -34,8 +34,8 @@ body, html {
 }
 
 .minicontent {
-    transform: scale(0.3) translate(-115%, -120%);
-    width: 100vw;
+    transform: scale(0.3) translate(-95%, -120%);
+    width: 75vw;
 }
 
 * {
