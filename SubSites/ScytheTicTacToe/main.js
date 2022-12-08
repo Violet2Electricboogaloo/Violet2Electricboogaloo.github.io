@@ -45,7 +45,7 @@ function tester(which) {
         setTimeout(() => {
         biggered = true
             $(".biggiecheese > *, body > h1").css("visibility", "hidden")
-            $(".biggiecheese > * > *, body > h1").css("visibility", "hidden")
+            $(".biggiecheese > *, body > h1").css("visibility", "hidden")
             $("#" + which + "> .minicontent").css("visibility", "visible")
         }, 1500);
     }
@@ -80,7 +80,7 @@ function theecks(which) {
     
         setTimeout(() => {
         $("#" + which).css("overflow", "hidden")
-            $("#" + which + "> .minicontent").css("visibility", "visible")
+        $(".biggiecheese > *, body > h1").css("visibility", "visible")
 
         biggered = false
         }, 1500);
